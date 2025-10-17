@@ -7,10 +7,10 @@ export const databaseProvider = [
       const dataSource = new DataSource({
         type: 'postgres',
         host: 'localhost',
-        port: 5434,
+        port: 5432,
         username: 'postgres',
-        password: '1234',
-        database: 'BackKevinSantana'
+        password: '12345',
+        database: 'backRonaldLatorre'
       });
       return dataSource.initialize();
     }
