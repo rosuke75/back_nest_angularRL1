@@ -6,11 +6,16 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Habilitamos CORS
+  app.enableCors();
+
+  // Validación global con class-validator
   app.useGlobalPipes(new ValidationPipe());
 
+  // Configuración de Swagger
   const config = new DocumentBuilder()
-    .setTitle('Cats example')
-    .setDescription('The Produc API description')
+    .setTitle('Product example')
+    .setDescription('The Product API description')
     .setVersion('1.0')
     .addTag('product')
     .build();
@@ -19,7 +24,5 @@ async function bootstrap() {
   SwaggerModule.setup('api', app, document);
 
   await app.listen(3000);
-
 }
-
 bootstrap();
