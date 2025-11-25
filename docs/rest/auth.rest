@@ -13,11 +13,11 @@ Content-Type: application/json
 
 {
     "name": "prueba2",
-    "email": "rp2@hm.com",
-    "password": "1234567"
+    "email": "rp@hm.com",
+    "password": "123456"
 }
 
 ### users
 
-GET http://127.0.0.1:3000/users
+GET http:/127.0.0.1:3000/users
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3NjAzOTQ4NTUsImV4cCI6MTc2MDM5NDkxNX0.uYfOVd9uualxEywhDX3dAo7rpN-PakAp72E7PRONQn8

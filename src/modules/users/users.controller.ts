@@ -3,9 +3,12 @@ import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { JwtAuthGuard }  from '../auth/jwt-auth.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @UseGuards(JwtAuthGuard)
-@Controller('users')
+@ApiBearerAuth()
+@ApiTags('user')
+@Controller('user')
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
@@ -14,7 +17,6 @@ export class UsersController {
     return this.usersService.create(createUserDto);
   }
 
-  
   @Get()
   findAll() {
     return this.usersService.findAll();
