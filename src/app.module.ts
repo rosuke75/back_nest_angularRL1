@@ -11,6 +11,7 @@ import { PersonaModule } from './modules/persona/persona.module';
 import { RoleModule } from './modules/role/role.module';
 import { ClienteModule } from './modules/cliente/cliente.module';
 import { PedidoModule } from './modules/pedido/pedido.module';
+import { ProductoModule } from './modules/producto/producto.module';
 
 @Module({
   imports: [
@@ -21,7 +22,7 @@ import { PedidoModule } from './modules/pedido/pedido.module';
     }),
     AuthModule, 
     UsersModule, 
-    DatabaseModule, CategoriaModule, PersonaModule, PedidoModule, RoleModule, ClienteModule, PedidoModule
+    DatabaseModule, CategoriaModule, PersonaModule, PedidoModule, RoleModule, ClienteModule, PedidoModule,ProductoModule
   ],
   controllers: [AppController],
   providers: [AppService],
